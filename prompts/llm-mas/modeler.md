@@ -62,13 +62,6 @@ Analyze term definitions to identify attributes and enumeration types:
 - **State**: `value: EString`, `createdAt: EDate`, `updatedAt: EDate`
 - **Prompt**: `content: EString`, `type: PromptType`
 - **User**: `identifier: EString`, `name: EString`
-- **Session**: `id: EString`, `startTime: EDate`
-- **Environment**: `name: EString`, `type: EString`
-- **Context**: `content: EString`
-- **File**: `path: EString`, `format: EString`, `size: EInt`
-- **Hook**: `trigger: EString`, `event: EString`
-- **Workflow**: `name: EString`, `status: WorkflowStatus`
-- **Task**: `description: EString`, `status: TaskStatus`, `priority: EInt`
 
 **Creating Enumerations:**
 Look for these patterns in definitions to create enums:
@@ -303,84 +296,6 @@ class Tool {{
 }}
 Component <|-- Tool
 
-class Memory {{
-         type : MemoryType
-}}
-Component <|-- Memory
-
-enum MemoryType {{
-WORKING
-EPISODIC
-SEMANTIC
-PROCEDURAL
-}}
-
-class Model {{
-         name : EString
-         version : EString
-         provider : EString
-}}
-Component <|-- Model
-
-class Knowledge {{
-         domain : EString
-}}
-Component <|-- Knowledge
-
-class Reasoning {{
-         strategy : ReasoningStrategy
-}}
-Component <|-- Reasoning
-
-enum ReasoningStrategy {{
-RULE_BASED
-PLANNING
-ML_BASED
-HYBRID
-}}
-
-class Storage {{
-         type : StorageType
-}}
-Component <|-- Storage
-
-enum StorageType {{
-FILE_SYSTEM
-SQL_DATABASE
-KEY_VALUE_DB
-GRAPH_DB
-}}
-
-' Specialized storage
-class VectorDB {{
-}}
-Storage <|-- VectorDB
-
-class State {{
-         value : EString
-         createdAt : EDate
-}}
-Component <|-- State
-
-class Task {{
-         description : EString
-         status : TaskStatus
-         priority : EInt
-}}
-Component <|-- Task
-
-enum TaskStatus {{
-PENDING
-RUNNING
-COMPLETED
-FAILED
-}}
-
-class Hook {{
-         trigger : EString
-         event : EString
-}}
-Component <|-- Hook
 
 class RetrievalStrategy {{
          name : EString
@@ -390,25 +305,6 @@ Component <|-- RetrievalStrategy
 class RAG {{
 }}
 RetrievalStrategy <|-- RAG
-
-class Workflow {{
-         name : EString
-         status : WorkflowStatus
-}}
-Component <|-- Workflow
-
-enum WorkflowStatus {{
-CREATED
-RUNNING
-PAUSED
-COMPLETED
-}}
-
-class Goal {{
-         objective : EString
-         priority : EInt
-}}
-Component <|-- Goal
 
 class PromptTemplate {{
          template : EString
@@ -421,73 +317,9 @@ USER_DEFINED
 SYSTEM_DEFINED
 }}
 
-class Requirement {{
-         condition : EString
-}}
-Component <|-- Requirement
-
-class Server {{
-         endpoint : EString
-         port : EInt
-}}
-Component <|-- Server
-
-class File {{
-         path : EString
-         format : EString
-         size : EInt
-}}
-Component <|-- File
-
-class Interpreter {{
-         sandboxed : EBoolean
-}}
-Component <|-- Interpreter
-
-class Runtime {{
-         environment : EString
-}}
-Component <|-- Runtime
 
 ' Construction relationships
 Agent "tools 0..*" --> Tool
-Agent "memory 0..1" --> Memory
-Agent "models 0..*" --> Model
-Agent "knowledge 0..1" --> Knowledge
-Agent "reasoning 0..1" --> Reasoning
-Agent "storage 0..1" --> Storage
-Agent "goal 0..1" --> Goal
-Agent "state 0..1" --> State
-Agent "workflow 0..1" --> Workflow
-Agent "interpreter 0..1" --> Interpreter
-Agent "requirements 0..*" --> Requirement
-
-Tool "tasks 0..*" --> Task
-Tool "hooks 0..*" -- Hook
-
-Memory "storage 0..1" --> Storage
-Memory "contexts 0..*" *-- Context
-
-Model "reasoning 0..1" --> Reasoning
-
-Knowledge "retrievalStrategy 0..1" --> RetrievalStrategy
-Knowledge "storage 0..1" --> Storage
-Knowledge "memory 0..1" --> Memory
-
-Storage "states 0..*" -- State
-Storage "data 0..*" --> File
-
-RAG "vectorDB 0..1" --> VectorDB
-
-Workflow "steps 0..*" --> Task
-
-Goal "definedBy 0..1" --> User
-
-Requirement "tools 0..*" --> Tool
-
-Server "exposedAgents 0..*" --> Agent
-
-Interpreter "runtime 0..1" --> Runtime
 }}
 
 package communication {{
@@ -500,24 +332,6 @@ enum PromptType {{
 SYSTEM
 USER
 ASSISTANT
-}}
-
-class Team {{
-}}
-
-class User {{
-         identifier : EString
-         name : EString
-}}
-
-class Session {{
-         id : EString
-         startTime : EDate
-}}
-
-class Environment {{
-         name : EString
-         type : EString
 }}
 
 class InputSchema {{
@@ -535,53 +349,13 @@ JSON_SCHEMA
 XML_SCHEMA
 }}
 
-class DirectLLMCall {{
-}}
-
-class Instruction {{
-         content : EString
-}}
-
-class HumanInteraction {{
-         isBlocking : EBoolean
-}}
-
-class Context {{
-         content : EString
-}}
-
 ' Communication relationships
 Prompt "inputSchema 0..1" --> InputSchema
 Prompt "outputSchema 0..1" --> OutputSchema
-Prompt "template 0..1" --> PromptTemplate
-Prompt "contexts 0..*" --> Context
-Prompt "user 0..1" --> User
-
-Team "sharedMemory 0..1" --> Memory
-Team "sharedStorage 0..1" --> Storage
-Team "sharedKnowledge 0..1" --> Knowledge
-Team "members 0..*" -- Agent
-
-Environment "data 0..*" --> File
-
-User "sessions 0..*" -- Session
-
-Session "user 0..1" --> User
-Session "agent 0..1" --> Agent
-
-DirectLLMCall "model 0..1" --> Model
-DirectLLMCall "prompt 0..1" --> Prompt
-
-Instruction "requirements 0..*" --> Requirement
-
-HumanInteraction "responsibleActor 0..1" --> User
 }}
 }}
 @enduml
 ```
-
-Note: This example is COMPREHENSIVE with 30+ classes, 8 enums, 50+ relationships, and many attributes per class.
-
 ---
 
 ## Critical Requirements

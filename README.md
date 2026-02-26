@@ -49,13 +49,15 @@ Element equivalence is determined as follows:
 
 ---
 
-## Model Comparison Results
+## Model Comparison Results (LLM-MAS experiment)
 
 **Reference Model:** `data\manual_baseline\plantuml_agentic.puml`
 
 - Classes: 43
 - Relationships: 72
 - Attributes: 37
+
+**Models for comparison:** : Five models stored in `data/llm-mas`. Generated in 5 independent runs.
 
 ### Classes
 
