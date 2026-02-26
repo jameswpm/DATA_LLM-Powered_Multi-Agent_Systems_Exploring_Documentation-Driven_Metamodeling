@@ -1,0 +1,253 @@
+Term,Definition,# of mentions in the frameworks
+Agent,"An autonomous software entity that can perform tasks independently or collaboratively with other agents. Agents perceive their environment, maintain internal state, and take actions based on instructions or goals.",48
+Vector Database,"Not mentioned in the provided documentation snippet. However, based on general knowledge, it refers to a specialized database that stores high-dimensional embeddings for semantic similarity search, enabling agents to retrieve relevant information based on meaning rather than exact keyword matches.",41
+Workflow,"A deterministic sequence of steps defining a process or execution path for agents. Workflows orchestrate multiple operations, tools, or agent interactions to accomplish complex tasks.",40
+Tool,"A utility or function that an agent can invoke to perform specific operations. Tools are often external APIs, database queries, or computational functions that extend the agent's capabilities beyond language generation.",37
+Memory,"The mechanism by which an agent stores and retrieves information across interactions. Memory systems handle conversation history, learned facts, and contextual knowledge to enable stateful behavior.",32
+Session,"A temporary connection between an agent and a user, during which the agent processes input, generates output, and maintains internal state. Sessions enable agents to engage in conversations, track progress, and adapt to changing user needs.",10
+RAG,A type of knowledge retrieval system that uses vector representations to match user queries with relevant information from a large corpus. RAGs are often used in conjunction with language models for more accurate and informative responses.,9
+Context,"The surrounding information or environment in which an agent operates, including user preferences, conversation history, and external data sources. Context is essential for agents to understand the nuances of a situation and provide relevant responses.",9
+Task,"A class that wraps an Agent, giving instructions (or roles, or goals), managing iteration over an Agent's responder methods, and orchestrating multi-agent interactions via hierarchical task-delegation.",9
+Prompt,"A sequence of words or characters that serves as input to a language model, guiding the generation of a response or output. Prompts can be simple questions, complex instructions, or even entire conversations.",7
+Model,"A large language model (LLM) that can be integrated with an agent to provide computational power and knowledge retrieval capabilities. Models can be hosted on the Hub via Inference providers or accessed via APIs such as OpenAI, Anthropic, or LiteLLM integration.",7
+LLM,"Large Language Model, a type of artificial intelligence model that uses deep learning techniques to process and generate human-like language. LLMs are trained on vast amounts of text data and can perform tasks such as language translation, text summarization, and question answering.",4
+RAG (Retrieval-Augmented Generation),A context-augmentation technique that combines retrieval and generation processes to improve LLM performance. RAG pipelines retrieve relevant information from a database and use it as input for the LLM to generate responses.,4
+Team,"A group of agents that collaborate to achieve a common objective. Teams enable the distribution of tasks among multiple agents, promoting scalability and efficiency in AI system development.",4
+LLM (Large Language Model),A type of artificial intelligence model that is trained on large amounts of text data to generate human-like language. LLMs are used in KaibanJS to provide specialized AI capabilities to agents.,4
+CrewAI,"A collaborative AI agent framework aimed at strengthening teamwork by facilitating communication through AI-driven insights, promoting a more cohesive and productive work environment.",3
+Agent Framework,"A software framework that provides a set of tools and abstractions for building and deploying agents. Agent frameworks often include features such as state management, memory systems, and workflow engines.",3
+State,"A representation of an agent's internal state, including its current condition, transitions, and intent matches. States are used to manage the flow of conversations and track changes in the conversation history.",3
+Hub,"A community repository of data loaders and integration tools for LlamaIndex. Hub enables developers to share and reuse code, reducing development time and improving collaboration.",3
+Qdrant,A vector database used in the example notebook provided with this guide. Qdrant enables agents to retrieve relevant information based on meaning rather than exact keyword matches.,2
+Semantic Kernel,"A natural language processing (NLP) component that enables agents to comprehend user intentions better by analyzing context, syntax, and semantics of input text.",2
+Processor,"A component that performs a specific task or function within the agent framework, such as language detection, user adaptation, or entity extraction. Processors can be combined to create more complex behaviors and interactions.",2
+Multi-Agent System,"A system composed of multiple autonomous agents that interact with each other to achieve common goals or solve complex problems. Multi-Agent Systems are designed for scalability, adaptability, and fault tolerance.",2
+Role,A specific function or responsibility assigned to an agent within a multi-agent system. Roles define the tasks and interactions each agent is expected to perform.,2
+Langchain,"An AI agent framework specializing in leveraging various APIs to ensure agents can access and utilize external data effectively, enhancing their ability to provide accurate and up-to-date information.",2
+Mastra,"A platform for building and deploying AI agents that provides a flexible architecture and integrates with various frameworks and servers. Mastra enables developers to build, iterate, and deploy AI agents quickly and efficiently.",2
+Autogen,"An AI agent framework designed to streamline the development of AI agents through automation of code generation, enabling rapid prototyping and deployment of intelligent systems.",2
+Crew,A group of AI agents that collaborate via context sharing and delegation to perform complex tasks. Crews are managed by a planning agent and can be composed of multiple task-specific agents.,2
+Planning,"A capability of the kernel that enables agents to create plans or workflows for achieving specific goals. Planning involves analyzing tasks, resources, and constraints to determine an optimal course of action.",2
+OpenAPI Specification,"A standard used by Semantic Kernel to share extensions with other developers, enabling the creation of reusable and modular AI-powered applications.",2
+MCP,"A connector that allows LlamaIndex to connect to any data source through standardized protocols. MCP enables seamless integration with various data formats, APIs, and databases.",2
+Action,"A labeled edge connecting nodes in the graph, representing a specific action or operation that can be taken by an agent.",2
+LlamaIndex,"A framework for building and orchestrating multi-agent AI systems, including RAGs. LlamaIndex provides a standardized protocol for connecting agents to data sources and enables the creation of complex workflows and tasks.",2
+Plugin,"A group of functions that can be exposed to AI apps and services, encapsulating a set of functionality that mirrors how enterprise developers already develop services and APIs.",2
+NLPEngine,"The natural language processing engine responsible for tasks like intent prediction, entity recognition, and text-to-speech conversion. It integrates various components, including LLMs and intent classifiers.",1
+Platform,"A framework for deploying and managing agent instances, providing a platform-agnostic interface for interacting with agents. Platforms enable the deployment of agents across various environments and facilitate communication between agents and external systems.",1
+Domain Expert,"A dataset of conversations between two agents that has been curated to demonstrate specific behaviors, such as role assignment, harm prevention, and consistent conversation. Domain experts are used for training and fine-tuning AI models.",1
+Transition,"A change in an agent's state or behavior, often triggered by an event or intent match. Transitions enable agents to adapt to changing circumstances and adjust their actions accordingly.",1
+Intent,"A specific goal or objective that an agent is trying to achieve in a conversation, often based on the user's input or context. Intents are used to guide the flow of conversations and determine the next steps for the agent.",1
+Entity,"A concept or object within the conversation environment, such as a person, place, or thing. Entities can be extracted from user input or generated by the agent based on its understanding of the context.",1
+Event,"A notification or signal that an agent receives from its environment, triggering actions or updates to its internal state. Events can be generated by user input, system changes, or other external factors.",1
+MPT-30B-Chat,"A chatbot-like model for dialogue generation that was built by fine-tuning MPT-30B and trained on 19.54% CAMEL-AI sourced data. MPT-30B-Chat is designed to generate human-like conversations and can be used in various applications, such as customer service or chatbots.",1
+Fine-Tuning,"The process of adjusting a pre-trained AI model to fit specific tasks, datasets, or objectives. Fine-tuning involves retraining the model on new data or modifying its architecture to improve performance on particular applications.",1
+Inception Prompting,"A type of prompt engineering that involves defining the initial context and objectives for a conversation between two agents. Inception prompting is used in multi-agent systems like CAMEL-AI to assign roles, prevent harm, and encourage consistent conversation.",1
+Storage Instance,"An instance of a vector database or storage system that stores and retrieves information, such as MilvusStorage.",1
+Embedding Model,"A model used to generate high-dimensional embeddings for semantic similarity search, such as OpenAIEmbedding.",1
+VectorRetriever,"A retriever instance that uses an integrated Unstructured Module to split content into small chunks, embed them, and store them in a vector storage instance.",1
+AutoRetriever,"An automatic retrieval system that uses a generative model to generate new text based on a given prompt, and retrieves relevant information from a vector database.",1
+CAMEL,A multi-agent framework that enables the creation of complex systems by combining multiple agents with different capabilities.,1
+Milvus,"The world's most advanced open-source vector database, built to power embedding similarity search and AI applications.",1
+Agentic RAG,"A knowledge retrieval system combining a broad range of sources, including files, websites, and vector databases, with intelligent query rewriting for optimized retrieval.",1
+MonitoringDB,"A database used to store monitoring data, such as chat history, events, and session variables. It provides a centralized repository for tracking agent interactions and performance metrics.",1
+Telegram Agent,"An agent designed for interacting with the Telegram platform, enabling agents to send and receive messages, manage conversations, and integrate with other Telegram features.",1
+Firecrawl,"An external service that provides a platform for building, deploying, and managing multi-agent systems. Firecrawl integrates with Camel-AI to enable seamless deployment of agents.",1
+Qwen,A type of Large Language Model (LLM) used in the example notebook provided with this guide. Qwen models are served by SambaCloud and can be integrated into Camel-AI agents for enhanced language capabilities.,1
+Prompt Engineering,"The process of designing and refining prompts to elicit specific responses from agents or to achieve particular goals in conversations. Prompt engineering involves careful definition of roles, constraints, and objectives to ensure consistent and effective dialogue.",1
+Synthetic Data,"Artificially generated data that mimics real-world scenarios, often used for training and fine-tuning AI models. Synthetic data can be created using tools like CAMEL-AI's Domain Expert dataset or other methods to simulate complex interactions and behaviors.",1
+ChatOpenAI,"A language model used by agents for generating responses, providing a foundation for conversational interactions.",1
+OpenAIFunctionsAgent,"An agent that can use OpenAI functions, allowing for the invocation of specific operations or computations within the agent's workflow.",1
+ConversationalAgent,"An agent that can engage in multi-turn conversations with users, leveraging language models and tools to generate responses.",1
+Flow,"An advanced orchestration mechanism that enables complex workflows with state management. Flows allow for dynamic routing, conditional logic, and parallel execution to create sophisticated task automation.",1
+MemGPT,"An AI agent architecture that combines memory-optimized architectures with generative capabilities, allowing for more personalized interactions with users and enabling agents to learn from user feedback.",1
+Factory (Self-hosted),"A containerized deployment option for CrewAI, allowing teams to host the framework on their own infrastructure, with support for hyperscalers and existing security systems.",1
+Promptflow,"A tool for developers to create conversational agents that can navigate complex interactions seamlessly, facilitating the design of engaging and informative dialogue flows.",1
+AMP (SaaS),"A cloud-based deployment option for CrewAI, offering zero installation requirements, automatic updates, and managed infrastructure and scaling.",1
+LMOS,"An open-source, cloud-native platform for building and running Multi-Agent systems. LMOS enables developers to create intelligent, scalable, and adaptive multi-agent systems using established open W3C standards.",1
+Interoperability,"The ability of agents to communicate and cooperate seamlessly across different systems, platforms, and networks using established open W3C standards for agent metadata description, discovery, and communication.",1
+Agent Ecosystem,"The environment in which agents operate, interact, and collaborate. The Agent Ecosystem includes the infrastructure, tools, and standards that enable agent development, deployment, and integration across networks and platforms.",1
+Decentralized Digital Identifiers,"W3C Decentralized Identifiers (DIDs) used by agents and tools for secure, verifiable, and self-sovereign authentication. This ensures cryptographic identity validation without relying on centralized authorities, enhancing trust, security, and interoperability across networks.",1
+Agent Communication Protocol,"The open protocol used by agents to communicate with each other, allowing flexibility in choosing the best transport protocol for each agent's purpose. Agents can select and adapt protocols based on their needs.",1
+Group Management,"The functionality provided by LMOS to create and manage agent groups, enforcing trust relationships among agents within the group. This enhances collaboration and coordination across agents in the system.",1
+Agent ReaCtor (ARC),"A framework provided by LMOS to abstract the intricacies of large language models (LLMs), memory management, and tool integration. ARC acts as a virtual 'OS' for AI agents, allowing developers to focus on creating intelligent, adaptable agents without getting bogged down by infrastructure complexity.",1
+LMOS Protocol,"The standardized communication protocol for establishing a distributed, open ecosystem of AI agents and tools. The LMOS Protocol ensures interoperability across diverse platforms and networks.",1
+Agent & Tool Description Format,A standardized format for describing the capabilities and metadata of Agents and Tools using JSON-LD. This specification facilitates interoperability across diverse agent platforms and domains.,1
+Metadata Propagation Protocol,"The mechanism by which agents and tools propagate metadata, supporting both local network discovery and registration, as well as broader network discovery through Agent registries or decentralized protocols.",1
+Cloud-Native Architecture,"A design approach that enables applications to take full advantage of cloud computing capabilities. Cloud-native architectures are scalable, flexible, and highly available, allowing agents to dynamically scale with growing AI needs.",1
+Collaborative Agent Ecosystem,"The collaborative approach enabled by LMOS that allows AI agents to share tools, memory, and knowledge much like applications in a traditional operating system. This enhances adaptability, allowing agents to handle complex queries and deliver more accurate, comprehensive solutions.",1
+Intelligent Task Management,"The feature of LMOS that utilizes both language model-based approaches and other mechanisms to manage tasks efficiently. This enables AI agents to handle complex queries and provide more accurate, comprehensive solutions.",1
+Tracing Framework,"A system for monitoring and analyzing the performance of agents, including tracing frameworks such as Arize Phoenix, Zipkin, Wavefront, or OTLP.",1
+Agent Definition Language (ADL),A simple yet powerful language to enable the definition of an AI Agent's behavior more reliably and efficiently.,1
+Spring Boot Starter,A project template and set of dependencies that simplify the integration of the Arc Framework into Spring Boot applications.,1
+LangChain4j,"The underlying library used by the Arc Framework for building AI agents, providing a Kotlin DSL and scripting capabilities.",1
+Workflow Agent,"A type of agent used to define workflows using workflow agents (Sequential, Parallel, Loop) for predictable pipelines, or leverage LLM-driven dynamic routing (LlmAgent transfer) for adaptive behavior.",1
+MCP (Multi-Client Protocol),"A protocol that enables multiple clients to communicate with a single server, used by the Arc Framework for client-server communication.",1
+LLM-Agent,An agent that uses Large Language Models (LLMs) for dynamic routing and adaptive behavior in workflows.,1
+Sequential Workflow Agent,A type of workflow agent that defines a predictable pipeline with sequential steps.,1
+Loop Workflow Agent,A type of workflow agent that defines a predictable pipeline with looped steps.,1
+Parallel Workflow Agent,A type of workflow agent that defines a predictable pipeline with parallel steps.,1
+"Open, Interoperable Architecture","The architecture of LMOS that supports seamless integration of AI agents across diverse platforms and networks. By embracing open standards, LMOS ensures that agents from various platforms can communicate, share knowledge, and collaborate, fostering innovation across industries.",1
+Agent Lifecycle Management,"The feature provided by LMOS to enable real-world deployment strategies, such as canary releases and advanced routing techniques based on Natural Language Understanding (NLU). This allows enterprises to introduce new agent features incrementally, ensuring stability and reducing risk during updates.",1
+Cloud-Native Scalability,"The scalability feature of LMOS that leverages Kubernetes to ensure cloud-native scalability. AI agents can grow alongside business needs, whether managing a small number of agents or deploying hundreds across multiple channels (e.g., web, mobile, IVR).",1
+Agent & Tool Discovery Process,"A discovery mechanism for obtaining agent and tool descriptions, accommodating updates to descriptions and handling the dynamic nature of agents. Agents can query centralized registries based on specific criteria, ensuring the right Agents or Tools are matched for a given task.",1
+MCP (Multi-Context Processing),A mechanism that enables agents to process multiple contexts simultaneously. MCP allows agents to handle complex tasks by integrating information from various sources and adapting to changing circumstances.,1
+Agent Engine,"The core component responsible for executing and managing agents. The Agent Engine handles task delegation, resource allocation, and communication between agents and tools.",1
+Multi-Agent Architecture,A modular and scalable architecture that enables complex coordination and delegation by composing multiple specialized agents in a hierarchy.,1
+LlmAgent Transfer,A mechanism for dynamic routing and adaptive behavior in workflows using Large Language Models (LLMs).,1
+VectorDatabase,A specialized database that stores high-dimensional embeddings for semantic similarity search. Vector databases enable agents to retrieve relevant information based on meaning rather than exact keyword matches.,1
+ADK,"The Google ADK (Agent Development Kit) is a framework for building and deploying AI agent systems. It provides tools, libraries, and APIs for creating autonomous software entities that can interact with their environment and perform tasks.",1
+Hugging Face MCP Server,A server that connects your ADK agent to the Hugging Face Hub and thousands of Gradio AI Applications.,1
+AuthScheme,"A mechanism for authenticating access to APIs, including token-based auth (API Key, Bearer token), service account, and OpenID Connect. ADK supports various authentication methods.",1
+Memory System,"The mechanism by which an agent stores and retrieves information across interactions, handling conversation history, learned facts, and contextual knowledge for stateful behavior.",1
+Hugging Face Hub,"A platform providing access to thousands of Gradio AI Applications and a repository of models, datasets, and papers that can be searched and filtered for tasks, libraries, or keywords.",1
+MCP Toolset,"A collection of tools and utilities provided by the Hugging Face MCP Server for interacting with the Hub and Gradio Spaces, including search and filtering capabilities.",1
+Gradio Spaces,"Pre-built AI applications that can perform specific tasks, such as background removal or text-to-speech, which agents can interact with using natural language queries.",1
+Transport Type,"The method used to communicate between the agent and the Hugging Face MCP Server, which can be stdio, sse, streamableHttp, or streamableHttpJson.",1
+DEFAULT_HF_TOKEN,An environment variable that specifies a default token for authentication with the Hugging Face API if no header is sent in requests.,1
+HF_API_TIMEOUT,"A configuration parameter specifying the timeout for Hugging Face API requests in milliseconds, defaulting to 12500ms (12.5 seconds).",1
+APIHubToolset,A utility for turning documented APIs from Apigee API Hub into tools with a few lines of code. This toolset enables the creation of agent tools by leveraging OpenAPI specs from Apigee API Hub.,1
+Kaiban Board,A visual representation of the workflow and team management system in KaibanJS. The Kaiban Board provides a Trello-style interface for managing AI agents and workflows.,1
+Role-Based Agent Design,"An approach to designing AI agents that involves configuring them to excel in distinct, critical functions within a project. This approach enhances the effectiveness and efficiency of each task.",1
+Team Store,"A specialized component in KaibanJS that manages the state and workflows of agents and tasks within a team, ensuring seamless operation and efficient data flow.",1
+LLM-Friendly Documentation,"Documentation formatted in a way that's optimized for large language models (LLMs) and can be easily integrated with AI coding assistants, IDEs, or LLM tools.",1
+Workflow Status,"An attribute indicating the current state of the team's workflow process, transitioning through various statuses reflecting different phases of the workflow lifecycle.",1
+workflowResult,"Stores the final result or output of the workflow once it has completed, providing a useful outcome for retrieving the result of all tasks processing.",1
+agents,"An array listing the agents involved in the team, detailing their roles and responsibilities within the workflow and current status.",1
+Query,A question or prompt used to retrieve relevant information from the RAG system.,1
+Reasoning,"The ability of an AI agent to reflect on its current task objective, create and refine a structured plan to execute it, and inject the plan into the task description. Reasoning enables agents to adapt to changing circumstances and make informed decisions.",1
+Planning Agent,"An AI agent responsible for creating step-by-step plans for tasks, which it shares with the crew. Planning agents enable coordinated action among team members.",1
+Top-K,"The number of top-ranked results returned by the retrieval system, such as the top 1 chunk with highest Cosine similarity score.",1
+BufferMemory,"A memory system that stores and retrieves information across interactions, handling conversation history, learned facts, and contextual knowledge to enable stateful behavior.",1
+GitLab Agent,"An agent designed for interacting with the GitLab platform, enabling agents to access repository information, manage code, and integrate with other GitLab features.",1
+IntentClassifierConfiguration,"A configuration object used to customize the intent classification process, specifying parameters such as LLM name and use of intent descriptions or training sentences.",1
+GitHub Agent,"An agent designed for interacting with the GitHub platform, allowing agents to access repository information, manage code, and integrate with other GitHub features.",1
+Chain,"A deterministic sequence of steps defining a process or execution path for agents. Chains orchestrate multiple operations, tools, or agent interactions to accomplish complex tasks.",1
+Redis,A caching system used by Langroid to store and retrieve cached LLM prompts and responses.,1
+Vector-Store,A specialized database that stores high-dimensional embeddings for semantic similarity search. Vector-stores enable agents to retrieve relevant information based on meaning rather than exact keyword matches.,1
+Goal,"A specific objective or target that an agent strives to achieve, often defined by its role and responsibilities within a team or project.",1
+llmConfig,"A configuration object used to specify the model provider and the specific LLM to be used by an agent, enabling precise task execution.",1
+workflowLogs,"Records all significant events and changes in the workflow's status, invaluable for debugging, auditing, and understanding the sequence of operations within the store.",1
+Model Provider,"An external service that hosts and manages various LLMs, enabling agents to access and utilize these models for specific tasks.",1
+workflowContext,"A deprecated attribute that stored essential context or metadata from the workflow execution, now dynamically derived from the workflowLogs array.",1
+tasks,"Contains all tasks assigned to the team, each managed according to the workflow defined by the team's operational rules.",1
+State Management,"The method by which software keeps track of changes in an application's state over time, ensuring predictable responses to user inputs and internal changes.",1
+LlamaCloud,"A cloud-based platform that powers enterprise-grade document automation with industry-best parsing, extraction, indexing, and retrieval — optimized for accuracy, configurability, and scalability.",1
+Context Augmentation,"The process of making data available to LLMs to solve problems at hand. Context augmentation involves ingesting, parsing, indexing, and processing data to enable stateful behavior in agents.",1
+Document Parsing,"The process of extracting structured information from unstructured documents. Document parsing involves identifying relevant data points, such as text, tables, and images, and converting them into a format that can be used by agents or other applications.",1
+Data Connectors,"Tools that ingest existing data from its native source and format, making it available for LLM processing. Data connectors handle data extraction, parsing, and indexing to facilitate context augmentation.",1
+Workflow Engine,"A system that manages the execution of workflows, including tasks, agents, and document pipelines. Workflow engines provide a flexible way to orchestrate complex AI processes.",1
+ToolMessage,A type of message that an agent can send to an LLM to invoke a specific tool or function. ToolMessages are used to extend the agent's capabilities beyond language generation.,1
+OpenAI Tool Call,"A specific type of tool call made by an agent to an OpenAI API. OpenAI tool calls enable agents to access advanced AI capabilities, such as text generation and translation.",1
+Vibe-llama,"A multimodal RAG framework for processing videos, images, and audio. Vibe-llama integrates computer vision, natural language processing, and audio analysis to provide a more comprehensive understanding of multimedia content.",1
+Observability/Evaluation Integrations,"Mechanisms that enable rigorous experimentation, evaluation, and monitoring of AI agent applications. These integrations facilitate a virtuous cycle of improvement and refinement.",1
+Create Llama,A CLI tool that quickly scaffolds new LlamaIndex applications. Create Llama simplifies the process of building and deploying AI systems by providing a standardized template and configuration files.,1
+semtools,"A semantic analysis toolkit for advanced text understanding and processing. semtools provides a range of tools and libraries for tasks such as entity recognition, sentiment analysis, and question answering.",1
+Evals,"Methods for evaluating the performance of agents, including model-graded, rule-based, and statistical evaluations. Evals are used in Mastra to track agent performance over time.",1
+Scorer,"An automated test that evaluates Agent outputs using model-graded, rule-based, and statistical methods. Scorers return scores: numerical values (typically between 0 and 1) that quantify how well an output meets your evaluation criteria.",1
+Textual Scorer,"A type of scorer that evaluates accuracy, reliability, and context understanding of agent responses.",1
+Classification Scorer,A type of scorer that measures accuracy in categorizing data based on predefined categories.,1
+Prompt Engineering Scorer,A type of scorer that explores the impact of different instructions and input formats on agent outputs.,1
+Live Evaluation,"The process of automatically scoring AI outputs in real-time as agents and workflows operate, providing continuous quality monitoring.",1
+Sampling Control,"A parameter (0-1) that controls what percentage of outputs get scored: 1.0 for every single response, 0.5 for half of all responses, 0.1 for 10% of responses, and 0.0 to disable scoring.",1
+Automatic Storage,"The process by which all scoring results are automatically stored in the mastra_scorers table in your configured database, allowing you to analyze performance trends over time.",1
+Trace Evaluation,"The process of using scorers to evaluate historical traces from agent interactions and workflows, particularly useful for analyzing past performance, debugging issues, or running batch evaluations.",1
+Engines,"Natural language interfaces that provide access to data for LLMs. Engines include query engines, chat engines, and agents, which enable various interaction patterns with the LLM.",1
+ChatDocument,"A data structure representing a conversation or message exchange between an agent and its environment. ChatDocuments contain metadata about the interaction, such as the sender, recipient, and content.",1
+Chroma,A vector-store library supported by Langroid for storing and retrieving high-dimensional embeddings.,1
+Output Processor,"An output processor is applied after the language model generates a response but before it is returned to the user. It's useful for response optimization, moderation, transformation, and applying safety controls.",1
+Input Processor,"An input processor is applied before user messages reach the language model. It's useful for normalization, validation, content moderation, prompt injection detection, and security checks.",1
+Prompt Injection Detector,"A prompt injection detector is an input processor that scans user messages for prompt injection, jailbreak attempts, and system override patterns to prevent malicious activity.",1
+Guardrail,"A guardrail is a mechanism that applies rules or transformations to inputs and outputs of an agent to ensure security, compliance, or quality standards.",1
+Batch Parts Processor,"A batch parts processor is an output processor that combines multiple stream parts before emitting them to the client, reducing network overhead and improving the user experience.",1
+Token Limiter Processor,A token limiter processor is an output processor that limits the number of tokens in model responses to manage cost and performance by truncating or blocking messages when the limit is exceeded.,1
+System Prompt Scrubber,A system prompt scrubber is an output processor that detects and redacts system prompts or other internal instructions from model responses to prevent unintended disclosure of prompt content or configuration details.,1
+Moderation Processor,A moderation processor is an input processor that detects and flags inappropriate content in user messages based on predefined categories and thresholds.,1
+AI SDK UI,"A user interface component library for building interactive chat experiences, providing tools for rendering conversation history, prompts, and responses in a visually appealing manner.",1
+AI Elements,"A set of reusable UI components for building conversational interfaces, including tools for displaying conversation history, prompts, and responses, as well as input fields for user interaction.",1
+DefaultChatTransport,"A transport mechanism for handling chat interactions between the client and server, enabling the streaming of agent responses in AI SDK format.",1
+ToolUIPart,"A UI component representing a tool invocation within a conversation, displaying input fields, output text, and error messages to facilitate user interaction with external APIs or databases.",1
+SELA,"The core framework for building and managing AI agent systems, providing a structured approach to developing autonomous software entities.",1
+Datasets,"Collections of data used to train, evaluate, or fine-tune agents. Datasets can be pre-existing or generated on-the-fly by the agent.",1
+Pipeline,"A sequence of operations that an agent performs on input data, often involving multiple tools and workflows. Pipelines enable efficient processing and transformation of data.",1
+Language Detector,A language detector is an input processor that detects the language of user messages and translates them into a target language if necessary.,1
+Task Decomposition,"The process of breaking down complex tasks into simpler ones, allowing agents to tackle them more efficiently and effectively.",1
+Graph,"A data structure representing a network of nodes and edges, used in Pocket Flow to model the LLM workflow and enable agent interactions.",1
+Shared Store,"A mechanism that enables communication between nodes within flows, allowing agents to share information and coordinate their actions.",1
+Node,"A basic unit of computation in Pocket Flow, representing a simple task or operation that can be performed by an agent.",1
+Batch Node,"A type of node that allows for data-intensive tasks to be performed in batches, enabling agents to process large amounts of data efficiently.",1
+Async Node,"A type of node that enables waiting for asynchronous tasks to complete, allowing agents to perform tasks that require external input or processing.",1
+Parallel Node,"A type of node that handles I/O-bound tasks in parallel, enabling agents to perform multiple tasks simultaneously and improve overall efficiency.",1
+Tool Call Tracking,"The mechanism by which the CLI displays which tools were called during agent execution, providing insight into tool usage and performance.",1
+Autonomy Modes,"A set of modes that control AI autonomy, including suggest, auto_edit, and full_auto. Autonomy modes determine how agents interact with users and perform tasks.",1
+Cost Tracking,"The mechanism by which the CLI monitors and displays real-time token usage and cost metrics for agent execution, enabling users to optimize performance and budget.",1
+Repository Map,"A feature that enables intelligent codebase mapping with tree-sitter, allowing agents to navigate and interact with project repositories more effectively.",1
+Interactive TUI,A rich terminal interface with completions that provides users with a interactive way to control agent execution and explore features.,1
+Message Queue,"A mechanism by which agents can queue messages while processing, ensuring efficient handling of concurrent tasks and improving overall performance.",1
+Observability,"A requirement for scoring traces, which involves configuring Mastra to collect trace data. See Tracing documentation for setup instructions.",1
+Workflows,"An event-driven, async-first workflow engine that orchestrates multi-step AI processes, agents, and document pipelines with precision and control.",1
+LanceDB,A vector-store library supported by Langroid for storing and retrieving high-dimensional embeddings.,1
+All CLI Features,"The comprehensive set of features and flags available in the CLI, including direct prompt execution, tool tracking, autonomy modes, cost tracking, and more.",1
+Sandbox Execution,A secure isolated command execution environment that protects against potential security risks and ensures safe testing of agents and tools.,1
+Git Integration,"The feature that enables auto-commit with AI messages and diff viewing, allowing users to seamlessly integrate agent-generated content with their version control systems.",1
+Deep Research,"A feature that enables automated multi-step research with citations, allowing agents to perform complex information retrieval tasks efficiently and accurately.",1
+Auto-Save,"The feature that enables automatic saving of sessions with a specified name, ensuring easy recovery and management of agent-generated content.",1
+History,"The mechanism by which agents can load history from the last N sessions, allowing users to track progress and optimize performance over time.",1
+Claude Memory Tool,"A specialized tool (Anthropic only) that enables Claude Memory functionality, providing agents with advanced memory management capabilities.",1
+User ID,A unique identifier used to isolate memories and ensure secure storage of sensitive information.,1
+Web & Search,"The feature that enables native web search, web fetch for URLs, deep research on topics, and query rewriting, allowing agents to interact with external resources efficiently.",1
+Tools & Extensions,"A set of features that enable loading additional tools, using MCP servers, and delegating tasks between agents, among other capabilities.",1
+Context & Prompts,"A set of features that enable adding code context from paths, reading input from files, specifying repository URLs, and expanding short prompts into detailed ones, among other capabilities.",1
+Monitoring & Display,"The feature that enables monitoring and displaying real-time metrics for agent execution, including token usage, cost, and performance indicators.",1
+SupportDependencies,A dataclass representing the dependencies required by a support agent in the bank example. SupportDependencies encapsulate customer information and database connections necessary for providing customer support.,1
+RunContext,"A data structure containing the context and dependencies required by an agent during execution. RunContexts provide a way to pass complex data structures between tools, instructions, and other components of the agent framework.",1
+SupportOutput,"A Pydantic model defining the output structure of a support agent's response. SupportOutput includes fields for advice, block card status, and risk level, enabling structured data exchange between agents and external systems.",1
+Function,"A unit of code within a plugin that performs a specific operation, often annotated with semantic descriptions for the AI to understand its behavior.",1
+Semantic Description,"A detailed description of how a function behaves, including input, output, and side effects, allowing the AI to correctly call the function.",1
+KernelFunction,"An attribute used in Semantic Kernel to annotate methods within a plugin class, indicating that they can be called by an AI or referenced in a prompt.",1
+MCP Server,"A server that allows other applications to consume plugins as a service, enabling cross-platform sharing and reuse of plugin functionality.",1
+RAG (Retrieval Augmented Generation),"A technique used in retrieval functions, where data is retrieved from external sources to augment the generation process, often improving performance and accuracy.",1
+Task Automation,"The use of plugins to automate tasks, often involving human-in-the-loop approval processes to ensure task completion correctness.",1
+Kernel,"The core component of the Semantic Kernel framework, responsible for managing agent interactions, executing tasks, and providing services to agents. The kernel acts as a central hub for agent communication and coordination.",1
+Service,"A reusable function or module that provides specific capabilities or functionality to agents within the kernel. Services can be used to perform tasks such as chat completion, planning, or data retrieval.",1
+ChatCompletion,A service provided by the kernel for generating human-like responses to user input. Chat completion services use AI models to generate text based on context and conversation history.,1
+CodeAgent,"A type of agent that writes its actions as Python code snippets, allowing for more efficient and higher-performing execution compared to traditional LLM output.",1
+ToolCallingAgent,"A standard agent that writes actions as JSON/text blobs, providing a sandboxed environment using Blaxel, E2B, or Docker to mitigate security risks.",1
+LiteLLMModel,"A model that provides access to 100+ LLMs via a unified interface, allowing for easy switching between different models and providers without modifying code.",1
+InferenceClientModel,"A gateway for all inference providers supported on Hugging Face, enabling seamless integration with various models and services while maintaining framework-agnosticism.",1
+Code Agent,"A type of agent that writes its actions in code to invoke tools or perform computations, enabling natural composability (function nesting, loops, conditionals).",1
+Tool Calling Agent,An agent that supports usual JSON/text-based tool-calling for scenarios where that paradigm is preferred.,1
+Modal,"A sandboxed environment for executing agents securely, providing isolation and protection from external threats.",1
+Blaxel,"A sandboxed environment for executing agents securely, providing isolation and protection from external threats.",1
+E2B,"A sandboxed environment for executing agents securely, providing isolation and protection from external threats.",1
+Docker,A containerization platform that enables secure execution of agents in isolated environments.,1
+Model Context Protocol (MCP),A standardized interface allowing agents to interact with external tools and access real-world data beyond their language capabilities through STDIO or SSE MCP servers.,1
+STDIO MCP Server,"A command-line tool implementing the MCP protocol, enabling agents to connect and perform actions using standardized interfaces.",1
+SSE MCP Server,"A web-based MCP server using Server-Sent Events, allowing agents to interact with external tools through a standardized interface for real-world data access.",1
+uAgents,"A library developed by Fetch.ai for creating autonomous AI agents in Python, allowing for easy creation and management of various types of agents that can interact with the Fetch.ai ecosystem and agent marketplace.",1
+Almanac,"A smart contract deployed on the Fetch.ai blockchain that serves as a registry for uAgents, enabling them to automatically join the network upon startup and register their presence.",1
+AgentOS,"A deployment and management platform for AI Agents, providing a K8s-based FastAPI runtime, metric dashboard, and on-premise availability for scalable, isolated, and secure agent integration.",1
+Safety Engine,A component that ensures the safe operation of agents by detecting and preventing potential risks or errors. Safety Engines are integrated into the Upsonic Framework to provide a safety-first approach to AI development.,1
+"MCP (Model, Component, Pipeline)","A modular construct that combines models, components, and pipelines to define an agent's behavior and interactions. MCPs enable flexible and reusable agent designs within the Upsonic Framework.",1
+Graph Execution,"A mechanism for executing tasks in a graph-based architecture, allowing for complex workflows and dependencies.",1
+AgentRunContext,An internal context object used to manage the execution of tasks and workflows within an agent.,1
+Supervisor Agent,A central agent responsible for coordinating and managing the workflow between specialized agents in a multi-agent system.,1
+Embedding,"A high-dimensional representation of text or other data, used to capture semantic meaning and relationships between entities. Embeddings enable agents to perform tasks like similarity search, clustering, and recommendation systems.",1
+VoltAgent,A framework for building AI agents that can perform tasks independently or collaboratively with other agents.,1
+Trigger,"An event or condition that captures external input, such as a GitHub webhook or cron schedule, and initiates an agent's workflow.",1
+Human-in-the-Loop Workflow,"A type of workflow that coordinates multi-step processes and allows for human input at specific points, enabling agents to pause execution and wait for user decisions before continuing.",1
+Expense Approval Workflow,An example workflow provided by VoltAgent that demonstrates suspend/resume functionality and auto-approval or manual review of expenses based on their amount.,1
+Deep Agent,"A type of agent built using the Deep Agents SDK, capable of handling complex tasks, managing large context, and persisting memory across conversations.",1
+Agent Harness,"The core tool calling loop that enables building and executing agents, providing a standardized interface for various agent frameworks.",1
+LangGraph Runtime,"A runtime environment that supports durable execution, streaming, human-in-the-loop, and other features for agents built using the LangChain framework.",1
+Deep Agents SDK,"A package for building deep agents that can handle complex tasks, manage large context, and persist memory across conversations.",1
+Deep Agents CLI,"An interactive terminal coding agent built on top of the Deep Agents package, enabling customization and execution of code in isolated environments.",1
+Planning and Task Decomposition,"A core capability of deep agents that enables breaking down complex tasks into discrete steps, tracking progress, and adapting plans as new information emerges.",1
+Context Management,"A feature of deep agents that allows offloading large context to in-memory or filesystem storage, preventing context window overflow and enabling work with variable-length tool results.",1
+File System Tools,"Utilities such as ls, read_file, write_file, and edit_file that enable agents to manage large context and interact with the file system.",1
+Pluggable Filesystem Backends,"A feature of deep agents that allows swapping between in-memory state, local disk, LangGraph store for cross-thread persistence, sandboxes, or custom backends to fit specific use cases.",1
+Subagent Spawning,"A capability of deep agents that enables spawning specialized subagents for context isolation, keeping the main agent's context clean while still going deep on specific subtasks.",1
+Long-term Memory,"A feature of deep agents that allows extending agents with persistent memory across threads using LangGraph's Memory Store, enabling saving and retrieving information from previous conversations.",1
+Memory Store,"A component of the LangGraph runtime that enables agents to persist memory across threads, allowing for stateful behavior and retrieval of information from previous conversations.",1
+LangGraph,"A low-level supporting infrastructure for any long-running, stateful workflow or agent. LangGraph provides durable execution, human-in-the-loop capabilities, comprehensive memory, and debugging tools.",1
+LangSmith,"A tool that provides deep visibility into complex agent behavior with visualization tools that trace execution paths, capture state transitions, and provide detailed runtime metrics.",1

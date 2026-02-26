@@ -1,0 +1,231 @@
+@startuml
+package agentic {
+package construction {
+class Agent {
+         identifier : EString
+         name : EString
+         visibility : Visibility
+         role : AgentRole
+         type : EString
+}
+Component <|-- Agent
+Agent "tools 0..*" --> Tool
+Agent "memory 0..1" --> Memory
+Agent "models 0..*" --> Model
+Agent "knowledge 0..1" --> Knowledge
+Agent "reasoning 0..1" --> Reasoning
+Agent "storage 0..1" --> Storage
+Agent "goal 0..1" --> Goal
+Agent "state 0..1" --> State
+Agent "team 0..1" -- "members 0..*" Team
+Agent "workflow 0..1" --> Workflow
+Agent "interpreter 0..1" --> Interpreter
+Agent "requirements 0..*" --> Requirement
+enum Visibility {
+PUBLIC
+TEAM
+PRIVATE
+}
+enum AgentRole {
+MANAGER
+SPECIALIST
+MEMBER
+}
+class Tool {
+         name : EString
+}
+Component <|-- Tool
+Tool "tasks 0..*" --> Task
+Tool "environments 0..*" --> Environment
+Tool "hooks 0..*" -- "usedInTool 0..1" Hook
+class Memory {
+         type : MemoryType
+}
+Component <|-- Memory
+Memory "contexts 0..*" *-- "originMemory 0..1" Context
+Memory "sessions 0..*" *--> Session
+Memory "storage 0..1" --> Storage
+enum MemoryType {
+WORKING
+EPISODIC
+SEMANTIC
+PROCEDURAL
+RESOURCE
+}
+class Model {
+         name : EString
+         version : EString
+}
+Component <|-- Model
+Model "reasoning 0..1" --> Reasoning
+Model "modelParams 0..1" -- "associatedModel 0..1" Context
+class Knowledge {
+         domain : EString
+}
+Component <|-- Knowledge
+Knowledge "retrievalStrategy 0..1" --> RetrievalStrategy
+Knowledge "data 0..1" --> ExternalData
+Knowledge "associatedMemory 0..1" --> Memory
+Knowledge "associatedStorage 0..1" --> Storage
+class Reasoning {
+         strategy : ReasoningStrategy
+}
+Component <|-- Reasoning
+Reasoning "usedInKnowledge 0..1" --> Knowledge
+enum ReasoningStrategy {
+RULE_BASED
+PLANNING
+ML_BASED
+HYBRID
+}
+class Storage {
+         type : StorageType
+}
+Component <|-- Storage
+Storage "states 0..*" -- "storedAt 0..1" State
+Storage "data 0..1" --> ExternalData
+enum StorageType {
+FILE_SYSTEM
+SQL_DATABASE
+KEY_VALUE_DB
+GRAPH_DB
+}
+class State {
+         value : EString
+         createdAt : EDate
+}
+Component <|-- State
+State "cachedAt 0..1" --> Memory
+class Task {
+         description : EString
+}
+Component <|-- Task
+Task "performedBy 0..*" --> Agent
+Task "definedBy 0..1" --> User
+class VectorDB {
+}
+Storage <|-- VectorDB
+class Hook {
+         trigger : EString
+}
+Component <|-- Hook
+class RetrievalStrategy {
+         name : EString
+}
+Component <|-- RetrievalStrategy
+class RAG {
+}
+RetrievalStrategy <|-- RAG
+RAG "vectorDB 0..1" --> VectorDB
+class Workflow {
+}
+Component <|-- Workflow
+class Goal {
+         objective : EString
+}
+Component <|-- Goal
+Goal "definedBy 0..1" --> User
+enum TemplateType {
+USER_DEFINED
+SYSTEM_DEFINED
+}
+class PromptTemplate {
+         template : EString
+         type : TemplateType
+}
+Component <|-- PromptTemplate
+class Requirement {
+         condition : EString
+}
+Component <|-- Requirement
+Requirement "tools 0..*" --> Tool
+class Server {
+         endpoint : EString
+}
+Component <|-- Server
+Server "exposedAgents 0..*" --> Agent
+class ExternalData {
+}
+Component <|-- ExternalData
+class File {
+         format : EString
+         path : EString
+}
+ExternalData <|-- File
+class Interpreter {
+         sandboxed : EBoolean
+}
+Component <|-- Interpreter
+Interpreter "runtime 0..1" --> Runtime
+class Runtime {
+         environment : EString
+}
+Component <|-- Runtime
+class System {
+}
+System "components 0..*" *--> Component
+class Component {
+}
+}
+package communication {
+class Prompt {
+         content : EString
+}
+Prompt "inputSchema 0..1" --> InputSchema
+Prompt "outputSchema 0..1" --> OutputSchema
+Prompt "template 0..1" --> PromptTemplate
+Prompt "contexts 0..*" --> Context
+enum PromptType {
+SYSTEM
+USER
+ASSISTANT
+}
+class Team {
+}
+Team "sharedMemory 0..1" --> Memory
+Team "sharedStorage 0..1" --> Storage
+Team "sharedKnowledge 0..1" --> Knowledge
+class Environment {
+         name : EString
+         type : EString
+}
+Environment "data 0..1" --> ExternalData
+Environment "associatedContext 0..1" -- "originEnvironment 0..1" Context
+class User {
+         identifier : EString
+}
+User "sessions 0..*" -- "user 0..1" Session
+User "userContext 0..1" -- "originUser 0..1" Context
+enum SchemaType {
+JSON_SCHEMA
+XML
+}
+class InputSchema {
+         definition : EString
+         type : SchemaType
+}
+class Session {
+}
+Session "agent 0..1" --> Agent
+class DirectLLMCall {
+}
+DirectLLMCall "model 0..1" --> Model
+DirectLLMCall "prompt 0..1" --> Prompt
+class Instruction {
+         content : EString
+}
+Instruction "requirements 0..*" --> Requirement
+class HumanInteraction {
+         isBlocking : EBoolean
+}
+HumanInteraction "responsibleActor 0..1" --> User
+class Context {
+         content : EString
+}
+class OutputSchema {
+         definition : EString
+         type : SchemaType
+}
+}
+}
+@enduml

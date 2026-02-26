@@ -1,0 +1,93 @@
+Term,Definition,# of mentions in frameworks
+API,Application Programming Interface that allows communication and integration with other systems.,4
+Workflow,A sequence of steps or tasks that agents follow to complete a process.,3
+GitHub Copilot,"An AI-powered tool that provides contextualized assistance throughout the software development lifecycle, including code completions, chat assistance, and code explanations.",2
+Agent,"A component that performs specific tasks, often with tools, knowledge, and instructions.",1
+Team,A group of agents that collaborate to achieve a common goal.,1
+Interface,"A connection point that allows agents to interact with external systems like Slack, WhatsApp, etc.",1
+Knowledge,A repository of information that agents can access to answer questions or make decisions.,1
+Tool,A utility or function that agents can use to perform specific tasks.,1
+Memory,A system that allows agents to retain and recall information from previous interactions.,1
+Router,A component that directs tasks or information to the appropriate agent or step in a workflow.,1
+Model,The underlying AI model that powers the agent's reasoning and decision-making capabilities.,1
+AgentOS,"A runtime environment for running secure, high-performance agent systems in the cloud.",1
+Control Plane,A management interface for monitoring and controlling the AgentOS.,1
+Workflow Steps,Individual tasks or actions within a workflow that agents execute.,1
+Interfaces,"Integration points that allow agents to connect with external platforms like Slack, AISdk, etc.",1
+AtomicAgent,"A modular component in the Atomic Agents framework that performs a specific task, defined by input/output schemas and system prompts.",1
+AgentConfig,"Configuration settings for an AtomicAgent, including client, model, system prompt, and history.",1
+BaseIOSchema,A base class for defining input and output schemas to ensure consistent data structure and validation.,1
+SystemPromptGenerator,"Generates system prompts for agents, defining their behavior, steps, and output instructions.",1
+ChatHistory,Stores conversation history or other relevant data for an agent.,1
+Context Providers,Components that inject dynamic context into an agent's system prompt at runtime.,1
+BaseDynamicContextProvider,A base class for creating context providers that supply dynamic information to agents.,1
+Atomic Assembler,"A CLI tool for downloading and managing tools, agents, and pipelines in the Atomic Agents framework.",1
+Input Schema,Specifies the structure and validation rules for the input data of an agent.,1
+Output Schema,Specifies the structure and validation rules for the output data of an agent.,1
+Action,A task that automates a specific workflow or process within GitHub.,1
+Runner,A server that runs workflows when they are triggered by events.,1
+Agentic RAG,Retrieval-Augmented Generation framework that combines retrieval of relevant information with generative capabilities.,1
+Matrix Builds,A feature that allows simultaneous testing across multiple operating systems and runtime versions.,1
+Container,"A lightweight, standalone, executable package of software that includes everything needed to run it.",1
+CDN,Content Delivery Network that provides fast and reliable distribution of packages and other content.,1
+Webhook,A way for GitHub to notify external services about events that occur within a repository.,1
+Self-hosted Runners,Runners that you can host on your own infrastructure to execute workflows.,1
+Multi-container Testing,"The ability to test multiple containers within a workflow, such as a web service and its database.",1
+GitHub Token,A token used to authenticate and authorize access to GitHub APIs and services.,1
+GitHub Actions Marketplace,A platform to discover and share actions created by the GitHub community.,1
+Event,"A specific activity in a repository that triggers a workflow, such as a push or pull request.",1
+Dependency Resolution,The process of managing and resolving dependencies required for building and deploying software.,1
+Secret Store,"A secure storage for sensitive information used in workflows, such as API keys and tokens.",1
+Agent Mode,"A feature that helps make sweeping changes by analyzing code, proposing edits, running tests, and validating results across multiple files.",1
+Copilot Chat,A communication interface that allows developers to interact with GitHub Copilot using different AI models for various coding tasks.,1
+Code Review,"A feature that analyzes code, uncovers hidden bugs, fixes mistakes, and provides feedback before human review.",1
+GitHub Actions,"A workflow automation tool used by GitHub Copilot to run code, test it, and deliver ready-to-review pull requests.",1
+MCP Servers,Servers that GitHub Copilot hooks into to draw on data from repositories and external resources.,1
+IDE,"Integrated Development Environment where GitHub Copilot provides code completions, chat assistance, and other features.",1
+GitHub Mobile,"A mobile platform where GitHub Copilot is supported, providing access to various features and integrations.",1
+GitHub CLI,"Command Line Interface that supports GitHub Copilot, allowing interaction through terminals.",1
+Windows Terminal Canary,A terminal application where GitHub Copilot is supported as a chat integration.,1
+GitHub.com,"The web platform where GitHub Copilot is natively integrated, providing various features and functionalities.",1
+GitHub Spark,"A feature or tool available in the Pro+ plan of GitHub Copilot, providing additional functionalities.",1
+Live Preview,"A feature that updates instantly as you build, allowing you to see your ideas take shape in real-time.",1
+AI-powered platform,A platform that uses artificial intelligence to enhance and automate the development process.,1
+Full-stack intelligent apps,"Applications that encompass both front-end and back-end development, incorporating AI features.",1
+One-click deployment,"The ability to publish and deploy applications with a single click, simplifying the deployment process.",1
+GitHub-authenticated access,Secure access to applications and services using GitHub's authentication system.,1
+VS Code with agent mode,Visual Studio Code integrated with an AI agent to enhance coding and development.,1
+AI features,"Functionalities such as chatbots, content generation, and smart automation embedded within applications.",1
+Version control,"A system that records changes to files over time, allowing for collaboration and tracking of modifications.",1
+Collaboration,"The ability to work together with others on the same project, often facilitated by tools and platforms.",1
+Prototyping,Creating functional prototypes quickly to demonstrate and iterate on ideas.,1
+Personal apps,"Custom applications built for individual use, often tailored to specific personal needs.",1
+SaaS launchpad,A platform or tool that helps validate and launch scalable Software as a Service (SaaS) applications.,1
+Web essentials,"Tools and features for building professional websites, including portfolios, landing pages, and marketing sites.",1
+Spark messages,Prompts sent to Spark to generate or modify applications using natural language.,1
+App building sessions,Active sessions where users can build and iterate on their applications.,1
+Compute,The processing power and resources required to run and deploy applications.,1
+Inference,The process of using AI models to make predictions or decisions based on input data.,1
+Storage,The space and resources allocated for storing application data and files.,1
+Hosting,The service that provides the infrastructure to deploy and run applications on the internet.,1
+Copilot Pro+,A premium plan that includes advanced features and capabilities for GitHub Copilot users.,1
+Iterate panel,A feature in Spark that allows users to refine and modify their applications using natural language or visual controls.,1
+Targeted editing,The ability to adjust specific parts of an application using natural language or visual controls.,1
+Runtime environment,"The environment in which applications run and are deployed, including necessary infrastructure and configurations.",1
+Codespaces,"A cloud-based development environment integrated with Visual Studio Code, allowing for seamless coding and collaboration.",1
+Coding agent,"An AI-powered tool that assists in coding and development, providing suggestions and automations.",1
+TypeScript,"A programming language that is a typed superset of JavaScript, often used for building large-scale applications.",1
+React,"A JavaScript library for building user interfaces, often used in conjunction with TypeScript.",1
+Microsoft Azure,"A cloud computing platform that provides hosting, compute, and other services for deploying applications.",1
+Models,AI models accessible through GitHub for running evaluations and comparisons.,1
+Prompts,"Inputs for AI models that can be versioned, shared, and reused like code.",1
+Evaluations,"Structured assessments to score AI outputs on quality, relevance, or custom metrics.",1
+GitHub Models,A service providing access to multiple AI models through a single API key within GitHub.,1
+Models Playground,"An environment to experiment with AI models, prompts, and parameters in real time.",1
+BYOK (Bring Your Own Key),The ability to use your own API keys from different providers for model inference.,1
+Azure OpenAI Service,"A cloud service providing AI models, integrated with GitHub for billing and usage.",1
+Module,"A file containing Python definitions and statements, used to organize code into reusable components.",1
+Package,A collection of modules in directories that provide a hierarchical structure for organizing related modules.,1
+Library,A collection of modules and packages that provide specific functionalities for use in Python programs.,1
+C API,A set of functions and methods that allow Python to be extended and embedded using C/C++ code.,1
+PyPI,"Python Package Index, a repository for third-party Python modules and packages.",1
+HOWTOs,In-depth manuals that provide detailed guidance on specific topics related to Python.,1
+FAQs,"Frequently Asked Questions, a collection of common questions and answers related to Python.",1

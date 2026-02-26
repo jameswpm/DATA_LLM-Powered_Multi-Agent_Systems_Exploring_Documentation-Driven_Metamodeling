@@ -1,0 +1,55 @@
+@startuml
+package "Agent Architecture" {
+    class Agent {
+        +name: String
+        +capabilities: List<String>
+        +goals: List<Goal>
+        -state: State
+        +perform(action: Action): void
+        +perceive(sensorData: SensorData): void
+    }
+    class Goal {
+        +description: String
+        +priority: Integer
+    }
+    Agent <|-- "SpecializedAgent": SpecializedAgent
+    class Environment {
+        +type: String
+        +state: State
+        +add(agent: Agent): void
+        +remove(agent: Agent): void
+    }
+}
+package "Interaction" {
+    class Action {
+        +name: String
+        +effect: Effect
+    }
+    class SensorData {
+        +source: Environment
+        +data: Map<String, Object>
+    }
+    class CommunicationChannel {
+        +type: String
+        +send(message: Message): void
+        +receive(): Message
+    }
+}
+package "Environment Modeling" {
+    class State {
+        +attributes: Map<String, Object>
+    }
+    class Effect {
+        +description: String
+        +impact: Impact
+    }
+    class Impact {
+        +type: String
+        +value: Integer
+    }
+}
+Agent --o Action : performs
+Agent --o SensorData : perceives
+Environment --> Agent : contains
+CommunicationChannel -|> Message : sends/receives
+@enduml

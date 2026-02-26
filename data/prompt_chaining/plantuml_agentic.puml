@@ -1,0 +1,115 @@
+@startuml
+
+package "Core Framework" {
+  class API {
+    +name: String
+    +version: String
+    +connect()
+    +disconnect()
+  }
+
+  class Workflow {
+    +name: String
+    +steps: List<Step>
+    +execute()
+    +addStep()
+  }
+
+  class Agent {
+    +name: String
+    +model: Model
+    +knowledge: Knowledge
+    +executeTask()
+    +useTool()
+  }
+
+  class Tool {
+    +name: String
+    +function: String
+    +execute()
+  }
+
+  class Model {
+    +name: String
+    +version: String
+    +reason()
+    +decide()
+  }
+
+  class Knowledge {
+    +repository: String
+    +query()
+    +update()
+  }
+
+  class Router {
+    +routeTask()
+    +directInformation()
+  }
+
+  class ControlPlane {
+    +monitor()
+    +control()
+  }
+
+  class SystemPromptGenerator {
+    +generatePrompt()
+    +defineBehavior()
+  }
+
+  class AgentConfig {
+    +client: String
+    +model: Model
+    +systemPrompt: String
+    +history: List<String>
+  }
+
+  class Event {
+    +name: String
+    +trigger()
+  }
+
+  class Webhook {
+    +url: String
+    +notify()
+  }
+
+  class GitHubToken {
+    +token: String
+    +authenticate()
+  }
+
+  class GitHubActions {
+    +runWorkflow()
+    +testCode()
+  }
+
+  class SecretStore {
+    +storeSecret()
+    +retrieveSecret()
+  }
+
+  class GitHubCopilot {
+    +provideAssistance()
+    +completeCode()
+  }
+
+API "1" *-- "1..*" Agent : uses
+Workflow "1" *-- "1..*" Agent : contains
+Agent "1" *-- "1..*" Tool : uses
+Agent "1" *-- "1" Model : powered by
+Agent "1" *-- "1" Knowledge : accesses
+Workflow "1" *-- "1" Router : directs
+Agent "1" *-- "1" AgentConfig : configures
+Agent "1" *-- "1" SystemPromptGenerator : generates prompts
+Workflow "1" *-- "1..*" Event : triggered by
+Event "1" *-- "1" Webhook : notifies
+GitHubActions "1" *-- "1" GitHubToken : authenticates
+GitHubActions "1" *-- "1" SecretStore : uses
+GitHubCopilot "1" *-- "1" GitHubActions : uses
+GitHubCopilot "1" *-- "1" Model : powered by
+}
+
+
+
+@enduml

@@ -1,0 +1,54 @@
+term,definition,mention_count,synonyms,frequency_score,relevance_score,consistency_score,importance_score,remarks
+Agent,"An autonomous software entity that can perform tasks independently or collaboratively with other agents. Agents perceive their environment, maintain internal state, and take actions based on instructions or goals.",48,[],3,3,2,8,
+Vector Database,"A specialized database that stores high-dimensional embeddings for semantic similarity search, enabling agents to retrieve relevant information based on meaning rather than exact keyword matches.",41,['VectorDB'],3,2,2,7,Important for RAG and semantic search in agents
+Workflow,"A deterministic sequence of steps defining a process or execution path for agents. Workflows orchestrate multiple operations, tools, or agent interactions to accomplish complex tasks.",40,[],3,3,2,8,
+Tool,"A utility or function that an agent can invoke to perform specific operations. Tools are often external APIs, database queries, or computational functions that extend the agent's capabilities beyond language generation.",37,[],3,3,2,8,
+Memory,"The mechanism by which an agent stores and retrieves information across interactions. Memory systems handle conversation history, learned facts, and contextual knowledge to enable stateful behavior.",32,[],3,3,2,8,
+Session,"A temporary connection between an agent and a user, during which the agent processes input, generates output, and maintains internal state. Sessions enable agents to engage in conversations, track progress, and adapt to changing user needs.",10,[],1,2,2,5,Important for conversational agents
+RAG,A type of knowledge retrieval system that uses vector representations to match user queries with relevant information from a large corpus. RAGs are often used in conjunction with language models for more accurate and informative responses.,9,['Retrieval-Augmented Generation'],1,2,2,5,Important for semantic search and knowledge retrieval
+Context,"The surrounding information or environment in which an agent operates, including user preferences, conversation history, and external data sources. Context is essential for agents to understand the nuances of a situation and provide relevant responses.",9,[],1,2,2,5,Important for conversational agents
+Task,"A class that wraps an Agent, giving instructions (or roles, or goals), managing iteration over an Agent's responder methods, and orchestrating multi-agent interactions via hierarchical task-delegation.",9,[],1,2,2,5,Important for multi-agent systems
+Prompt,"A sequence of words or characters that serves as input to a language model, guiding the generation of a response or output. Prompts can be simple questions, complex instructions, or even entire conversations.",7,[],1,2,2,5,Important for language models and conversational agents
+Model,A trained machine learning component that processes input and produces output.,1,"['LLM', 'Provider', 'Backend', 'AI Client', 'LLM Wrapper']",1,3,1,5,
+LLM,"Large Language Model, a type of artificial intelligence model that uses deep learning techniques to process and generate human-like language. LLMs are trained on vast amounts of text data and can perform tasks such as language translation, text summarization, and question answering.",4,['Language Model'],1,2,1,4,Important for language understanding and generation
+Team,A collection of agents using some coordination strategy to work together on complex tasks.,1,"['Crew', 'Multi-Agent System', 'Agent Group']",1,3,1,5,
+State,"A representation of an agent's internal state, including its current condition, transitions, and intent matches. States are used to manage the flow of conversations and track changes in the conversation history.",3,[],1,2,2,5,Important for conversational agents
+Planning,"A capability of the kernel that enables agents to create plans or workflows for achieving specific goals. Planning involves analyzing tasks, resources, and constraints to determine an optimal course of action.",2,[],1,2,2,5,Important for multi-agent systems
+Embedding,"A vector representation of information in a lower-dimensional space, used for semantic similarity and retrieval. Embeddings are often used in RAGs and other knowledge retrieval systems.",2,['Vector Representation'],1,2,2,5,Important for semantic search and knowledge retrieval
+VectorRetriever,"A retriever instance that uses an integrated Unstructured Module to split content into small chunks, embed them, and store them in a vector storage instance.",1,[],1,1,2,4,Specialized concept for vector databases
+AutoRetriever,"An automatic retrieval system that uses a generative model to generate new text based on a given prompt, and retrieves relevant information from a vector database.",1,[],1,1,2,4,Specialized concept for automatic retrieval
+Agent Engine,"The core component responsible for executing and managing agents. The Agent Engine handles task delegation, resource allocation, and communication between agents and tools.",1,[],1,2,2,5,Important for agent management and execution
+Multi-Agent Architecture,A modular and scalable architecture that enables complex coordination and delegation by composing multiple specialized agents in a hierarchy.,1,[],1,2,2,5,Important for multi-agent systems
+LlmAgent Transfer,A mechanism for dynamic routing and adaptive behavior in workflows using Large Language Models (LLMs).,1,[],1,1,2,4,Specialized concept for LLM-based workflows
+VectorDatabase,A specialized database that stores high-dimensional embeddings for semantic similarity search. Vector databases enable agents to retrieve relevant information based on meaning rather than exact keyword matches.,1,['Vector DB'],1,2,2,5,Important for semantic search and knowledge retrieval
+ADK,"The Google ADK (Agent Development Kit) is a framework for building and deploying AI agent systems. It provides tools, libraries, and APIs for creating autonomous software entities that can interact with their environment and perform tasks.",1,[],1,1,2,4,Specialized concept for agent development
+Hugging Face MCP Server,A server that connects your ADK agent to the Hugging Face Hub and thousands of Gradio AI Applications.,1,[],1,1,2,4,Specialized concept for Hugging Face integration
+AuthScheme,"A mechanism for authenticating access to APIs, including token-based auth (API Key, Bearer token), service account, and OpenID Connect. ADK supports various authentication methods.",1,[],1,1,2,4,Specialized concept for authentication
+Memory System,The mechanism by which an agent stores and retrieves information across interactions.,1,['BufferMemory'],1,2,1,4,
+Goal,A specific objective or target that an agent strives to achieve.,1,[],1,2,2,5,
+State Management,The method by which software keeps track of changes in an application's state over time.,1,[],1,2,2,5,
+Context Augmentation,The process of making data available to LLMs to solve problems at hand.,1,[],1,2,2,5,
+Vector-Store,A specialized database that stores high-dimensional embeddings for semantic similarity search.,1,"['LanceDB', 'Chroma']",1,2,1,4,
+Tool Call Tracking,The mechanism by which the CLI displays which tools were called during agent execution.,1,[],1,1,2,4,
+Autonomy Modes,A set of modes that control AI autonomy.,1,[],1,1,2,4,
+Cost Tracking,The mechanism by which the CLI monitors and displays real-time token usage and cost metrics for agent execution.,1,[],1,1,2,4,
+Repository Map,A feature that enables intelligent codebase mapping with tree-sitter.,1,[],1,1,2,4,
+Interactive TUI,A rich terminal interface with completions that provides users with a interactive way to control agent execution and explore features.,1,[],1,1,2,4,
+Message Queue,A mechanism by which agents can queue messages while processing.,1,[],1,1,2,4,
+Observability,"A requirement for scoring traces, which involves configuring Mastra to collect trace data.",1,[],1,1,2,4,
+Workflows,"An event-driven, async-first workflow engine that orchestrates multi-step AI processes, agents, and document pipelines with precision and control.",1,[],1,2,2,5,
+Sandbox Execution,A secure isolated command execution environment that protects against potential security risks and ensures safe testing of agents and tools.,1,[],1,1,2,4,
+Git Integration,The feature that enables auto-commit with AI messages and diff viewing.,1,[],1,1,2,4,
+Deep Research,A feature that enables automated multi-step research with citations.,1,[],1,1,2,4,
+Auto-Save,The feature that enables automatic saving of sessions with a specified name.,1,[],1,1,2,4,
+History,The mechanism by which agents can load history from the last N sessions.,1,[],1,1,2,4,
+Claude Memory Tool,A specialized tool that enables Claude Memory functionality.,1,[],1,1,2,4,
+User ID,A unique identifier used to isolate memories and ensure secure storage of sensitive information.,1,[],1,1,2,4,
+Web & Search,"The feature that enables native web search, web fetch for URLs, deep research on topics, and query rewriting.",1,[],1,1,2,4,
+Tools & Extensions,"A set of features that enable loading additional tools, using MCP servers, and delegating tasks between agents.",1,[],1,1,2,4,
+Context & Prompts,"A set of features that enable adding code context from paths, reading input from files, specifying repository URLs, and expanding short prompts into detailed ones.",1,[],1,1,2,4,
+Monitoring & Display,The feature that enables monitoring and displaying real-time metrics for agent execution.,1,[],1,1,2,4,
+Kernel,"The core component of the Semantic Kernel framework, responsible for managing agent interactions and providing services.",1,[],1,3,2,6,Core component of the Semantic Kernel framework
+Service,A reusable function or module that provides specific capabilities to agents within the kernel.,1,['ChatCompletion'],1,2,1,4,Supporting concept for agent capabilities
+RAG (Retrieval Augmented Generation),A technique used in retrieval functions to augment the generation process with external data.,1,[],1,2,2,5,Supporting AI/ML concept for agents
+Memory Management,A feature of deep agents that allows extending agents with persistent memory across threads.,1,"['Long-term Memory', 'Memory Store']",1,2,1,4,Important feature for deep agents

@@ -1,0 +1,37 @@
+Term,Definition,# of mentions in the frameworks
+Agent,"An agent is an autonomous software entity that can perform tasks alone or in collaboration with other agents. Agents perceive their environment, maintain internal state, and take actions based on instructions or goals.",26
+Tool,"A utility or service that an agent can use to perform a task. Often, they are external APIs or functions invoked by agents",20
+Memory,"The mechanism by which an agent, a team or the user stores and retrieves information. It handles past interactions, context, and learned facts",16
+Model,A model is a trained machine learning component (often a language model) that processes input and produces output. It may be pre-trained or fine-tuned for specific tasks,19
+Knowledge,"Domain-specific information accessible by agents. Usually, it comes from external sources (databases, documents) beyond the agent's immediate internal state",3
+Reason,"The agent’s process of thinking, making inferences, and making decisions based on information.",6
+Storage,The database used by agents to save relevant information and state between sessions.,3
+Prompt,A prompt is an input message (often from a user or another system) that instructs the agent on what to do.,9
+Team,A collection of agents using some team strategy.,11
+State,"The current condition or configuration of an agent, sometimes holding data.",10
+Task,A specific action or set of actions that an agent(s) is designed to perform.,7
+Environment,"The context or setting in which agents operate. This includes external systems, data sources, users, and any aspects outside the agent’s internal model.",2
+Vector DB,"A VectorDB is a specialized database for storing high-dimensional embeddings (vector representations) of data, commonly used for semantic memory or similarity search.",7
+Hook,"A hook is an event-triggered function that allows custom actions or checks, potentially modifying tool behavior or handling errors.",6
+User,A person (or team) that directly interacts with the agent. Users are external to the agent system.,2
+RAG,RAG is a technique that combines retrieving relevant information from a knowledge base (often a VectorDB) with language model generation.,9
+Workflow,"A  deterministic, stateful sequence of steps to be executed by the agent or agents. A workflow defines a process or program of execution.",12
+Input Schema,Specifies the structure and validation rules for the agent's input. Schemas ensure inputs are well-formed,1
+Goal,The desired outcome or state that an agent aims to achieve. Goals guide agent planning and decision-making.,2
+Session,A collection of elements linking a user to an agent. Session groups related interactions over a time period,1
+Direct LLM Call,A simple and single call to the model API. A direct call may bypass any intermediate agent logic or tools.,1
+Instruction,Instructions tell the agent how to behave and how to use its tools.,5
+Human Interaction,When human oversight and input are required during agent execution.,5
+Context,Context is additional information provided to the agent (often via the prompt) to help situate the request.,5
+Output Schema,Specifies the structure and validation rules for the agent's output,5
+Prompt Template,A prompt template is a reusable prompt structure with placeholders that can be filled in or modified.,3
+Requirement,Defined condition or rule that control when and how tools are used by the agent,1
+Server,"A server hosts agent framework services, exposing APIs to clients. components built with the framework through a server to external clients.",1
+File,"Standard data containers (text, audio, video, etc.) to be used for data transfers.",4
+Interpreter,An interpreter is a software component (or environment) that executes code provided by agents.,2
+Rutime,The runtime is the context or environment in which agents (and their code) are executed.,3
+Node,A high-level abstraction of any component of an agent.,1
+Toolkit,Collection of tools.,2
+Embedding,A vector representation of a information in a smaller dimension.,5
+Step,Building block of a workflow,5
+Transitions,Determine the flow of execution between steps. They are conditions or triggers in the workflow.,3

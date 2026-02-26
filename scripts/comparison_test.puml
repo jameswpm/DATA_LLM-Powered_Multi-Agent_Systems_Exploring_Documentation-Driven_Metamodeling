@@ -1,0 +1,82 @@
+@startuml Comparison Model
+' Comparison PlantUML - similar to reference with intentional differences
+' Uses reverse arrows, different aliases, missing/extra elements
+
+package core {
+    class Agent {
+        ' Matching attributes
+        +id: String
+        -name: String
+        ' Missing: #status: Status
+        ' Missing: {static} count: int
+        +extraField: Boolean ' Extra attribute
+    }
+    
+    abstract class base_task {  ' snake_case naming (should normalize same)
+        +taskId: String
+        ' Missing: {abstract} execute() - but that's a method anyway
+    }
+}
+
+package services {
+    ' Using different alias
+    class "Message Service" as MessageService {
+        +queue: List
+        -timeout: int
+        +newAttr: String ' Extra
+    }
+    
+    interface Runnable {
+        +run()
+    }
+}
+
+namespace models {  ' Using namespace instead of package (should work same)
+    class Order {
+        +orderId: String
+        +total: Decimal
+        ' Missing: calculate() method - but methods are skipped
+    }
+    
+    ' Missing: Customer class entirely
+    
+    enum Status {
+        PENDING
+        ACTIVE
+        DONE
+    }
+}
+
+' Extra class not in reference
+class ExtraService {
+    +config: Map
+}
+
+' Inheritance - using REVERSE arrow (should normalize same)
+BaseTask <|-- Agent
+Order --|> models.Status : uses  ' forward arrow
+
+' Realization - using reverse arrow
+Runnable <|.. MessageService
+
+' Composition - same cardinality, reverse arrow
+Customer "*" --* "1" Order : contains
+
+' Aggregation - reverse arrow direction
+BaseTask "0..*" --o "1" Agent : manages
+
+' Directed association - some matching, some different
+Agent --> MessageService : sends
+' Missing: Customer <-- Order
+
+' Undirected association - same
+Agent -- Runnable
+
+' Dependency - matching both directions
+Order ..> Status
+Agent ..> MessageService : depends  ' Different target than reference
+
+' Extra relationship not in reference
+ExtraService --> Agent : monitors
+
+@enduml

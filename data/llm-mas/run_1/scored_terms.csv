@@ -1,0 +1,19 @@
+term,definition,mention_count,synonyms,frequency_score,relevance_score,consistency_score,importance_score,remarks
+Agent,An autonomous software entity that can perform tasks independently or collaboratively with other agents.,1,"['AI Agent', 'Software Agent']",1,3,1,5,Core concept in AI agent frameworks
+Model,A trained machine learning component that processes input and produces output.,1,"['LLM', 'Language Model']",1,3,1,5,Key concept in AI agent frameworks
+Workflow,A series of tasks or processes that are executed in a specific order to achieve a goal.,1,"['Task Flow', 'Process Flow']",1,3,1,5,Important concept in AI agent frameworks
+Team,A collection of agents that work together to achieve a common goal.,1,"['Multi-Agent System', 'Agent Group']",1,3,1,5,Core concept in multi-agent systems
+Context,The information and environment that an agent operates in.,1,"['Environment', 'State']",1,3,1,5,Important concept in AI agent frameworks
+Planning,The process of creating a plan or sequence of actions to achieve a goal.,1,"['Goal-Oriented Planning', 'Decision-Making']",1,3,1,5,Key concept in AI agent frameworks
+Reasoning,The process of drawing conclusions or making decisions based on available information.,1,"['Inference', 'Decision-Making']",1,3,1,5,Important concept in AI agent frameworks
+State Management,The process of managing and updating the state of an agent or system.,1,"['State Tracking', 'State Updating']",1,3,1,5,Key concept in AI agent frameworks
+Vector-Store,A database that stores high-dimensional vectors for efficient similarity search.,1,"['Vector Database', 'Embedding Store']",1,2,1,4,Specialized concept in AI agent frameworks
+Data Indexes,Mechanisms that structure data for efficient querying and retrieval.,1,"['Data Structures', 'Indexing']",1,2,1,4,Important concept in data management
+Data Connectors,Tools that ingest and process data from various sources.,1,"['Data Ingestion', 'Data Processing']",1,2,1,4,Key concept in data management
+Observability,The process of collecting and analyzing data to understand system behavior.,1,"['Monitoring', 'Logging']",1,2,1,4,Important concept in system management
+Evaluation,The process of assessing system performance and accuracy.,1,"['Testing', 'Validation']",1,2,1,4,Key concept in system development
+Kernel,"The core component of the Semantic Kernel framework, responsible for managing agent interactions and executing tasks.",1,[],1,3,2,6,Core concept in Semantic Kernel framework
+Service,A reusable function or module that provides specific capabilities or functionality to agents within the kernel.,1,[],1,2,2,5,Important concept in AI agent frameworks
+Embedding,"A high-dimensional representation of text or other data, used to capture semantic meaning and relationships between entities.",1,[],1,2,2,5,Important concept in AI agent frameworks
+Supervisor Agent,A central agent responsible for coordinating and managing the workflow between specialized agents in a multi-agent system.,1,[],1,3,2,6,Core concept in multi-agent systems
+Sub-Agent,"A specialized agent that performs specific tasks or operations within a larger workflow, often under the supervision of a Supervisor Agent.",1,[],1,2,2,5,Important concept in multi-agent systems

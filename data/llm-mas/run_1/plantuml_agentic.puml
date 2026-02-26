@@ -1,0 +1,179 @@
+@startuml
+package agentic {
+package construction {
+
+class Component {
+}
+
+class Kernel {
+    identifier : EString
+    name : EString
+}
+Component <|-- Kernel
+
+class SupervisorAgent {
+    identifier : EString
+    name : EString
+    role : EString
+}
+Component <|-- SupervisorAgent
+
+class Agent {
+    identifier : EString
+    name : EString
+    type : AgentType
+    visibility : Visibility
+}
+Component <|-- Agent
+
+enum AgentType {
+    SOFTWARE_AGENT
+    AI_AGENT
+}
+
+enum Visibility {
+    PUBLIC
+    PRIVATE
+    TEAM
+}
+
+class Model {
+    name : EString
+    version : EString
+    provider : EString
+    type : ModelType
+}
+Component <|-- Model
+
+enum ModelType {
+    LLM
+    LANGUAGE_MODEL
+}
+
+class Workflow {
+    name : EString
+    status : WorkflowStatus
+}
+Component <|-- Workflow
+
+enum WorkflowStatus {
+    CREATED
+    RUNNING
+    PAUSED
+    COMPLETED
+}
+
+class Team {
+    name : EString
+    members : EString
+}
+Component <|-- Team
+
+class Context {
+    content : EString
+}
+Component <|-- Context
+
+class Planning {
+    strategy : PlanningStrategy
+}
+Component <|-- Planning
+
+enum PlanningStrategy {
+    GOAL_ORIENTED
+    DECISION_MAKING
+}
+
+class Reasoning {
+    strategy : ReasoningStrategy
+}
+Component <|-- Reasoning
+
+enum ReasoningStrategy {
+    INFERENCE
+    DECISION_MAKING
+}
+
+class StateManagement {
+    state : EString
+}
+Component <|-- StateManagement
+
+class Service {
+    name : EString
+    description : EString
+}
+Component <|-- Service
+
+class Embedding {
+    vector : EString
+}
+Component <|-- Embedding
+
+class SubAgent {
+    identifier : EString
+    name : EString
+    role : EString
+}
+Component <|-- SubAgent
+
+Kernel "supervisorAgent 0..1" --> SupervisorAgent
+SupervisorAgent "agents 0..*" --> Agent
+Agent "models 0..*" --> Model
+Agent "workflows 0..*" --> Workflow
+Agent "teams 0..*" --> Team
+Agent "contexts 0..*" --> Context
+Agent "planning 0..1" --> Planning
+Agent "reasoning 0..1" --> Reasoning
+Agent "stateManagement 0..1" --> StateManagement
+Agent "services 0..*" --> Service
+Model "embeddings 0..*" --> Embedding
+SupervisorAgent "subAgents 0..*" --> SubAgent
+SubAgent "services 0..*" --> Service
+}
+
+package communication {
+class Prompt {
+    content : EString
+    type : PromptType
+}
+
+enum PromptType {
+    SYSTEM
+    USER
+    ASSISTANT
+}
+
+class User {
+    identifier : EString
+    name : EString
+}
+
+class Session {
+    id : EString
+    startTime : EDate
+}
+
+class Environment {
+    name : EString
+    type : EString
+}
+
+class Instruction {
+    content : EString
+}
+
+class HumanInteraction {
+    isBlocking : EBoolean
+}
+
+Prompt "user 0..1" --> User
+User "sessions 0..*" -- Session
+Session "user 0..1" --> User
+Session "agent 0..1" --> Agent
+Environment "data 0..*" --> Embedding
+Instruction "requirements 0..*" --> Service
+HumanInteraction "responsibleActor 0..1" --> User
+}
+}
+@enduml

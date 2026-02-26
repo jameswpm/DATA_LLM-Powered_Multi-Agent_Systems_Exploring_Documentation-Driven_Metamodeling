@@ -1,0 +1,75 @@
+@startuml Reference Model
+' This is a reference PlantUML for testing the comparison script
+' Contains various patterns: packages, aliases, cardinalities, arrows, attributes
+
+package core {
+    class Agent {
+        ' Core attributes
+        +id: String
+        -name: String
+        #status: Status
+        {static} count: int
+    }
+    
+    abstract class BaseTask {
+        +taskId: String
+        {abstract} execute()
+    }
+}
+
+package services {
+    class "Message Service" as MsgSvc {
+        +queue: List
+        -timeout: int ' in milliseconds
+    }
+    
+    interface Runnable {
+        +run()
+    }
+}
+
+package models {
+    class Order {
+        +orderId: String
+        +total: Decimal
+        --
+        +calculate()
+    }
+    
+    class Customer {
+        +customerId: String
+        +email: String
+    }
+    
+    enum Status {
+        PENDING
+        ACTIVE
+        DONE
+    }
+}
+
+' Inheritance (forward and reverse arrows)
+Agent --|> BaseTask
+models.Status <|-- Order : uses
+
+' Realization
+MsgSvc ..|> Runnable
+
+' Composition with cardinality
+Order "1" *-- "1..*" Customer : contains
+
+' Aggregation with cardinality  
+Agent "1" o-- "0..*" BaseTask : manages
+
+' Directed association
+Agent --> MsgSvc : sends
+Customer <-- Order : belongs to
+
+' Undirected association
+Agent -- Runnable
+
+' Dependency
+Order ..> Status
+MsgSvc <.. Agent : depends
+
+@enduml

@@ -1,0 +1,602 @@
+@startuml
+package agentic {
+package construction {
+
+' Base component class
+class Component {
+}
+
+' Core entities with enums
+class Agent {
+         identifier : EString
+         name : EString
+         role : AgentRole
+         type : EString
+         visibility : Visibility
+}
+Component <|-- Agent
+
+enum AgentRole {
+MANAGER
+SPECIALIST
+MEMBER
+WORKER
+}
+
+enum Visibility {
+PUBLIC
+PRIVATE
+TEAM
+}
+
+class Tool {
+         name : EString
+         description : EString
+}
+Component <|-- Tool
+
+class Memory {
+         type : MemoryType
+}
+Component <|-- Memory
+
+enum MemoryType {
+WORKING
+EPISODIC
+SEMANTIC
+PROCEDURAL
+}
+
+class Model {
+         name : EString
+         version : EString
+         provider : EString
+}
+Component <|-- Model
+
+class Knowledge {
+         domain : EString
+}
+Component <|-- Knowledge
+
+class Reasoning {
+         strategy : ReasoningStrategy
+}
+Component <|-- Reasoning
+
+enum ReasoningStrategy {
+RULE_BASED
+PLANNING
+ML_BASED
+HYBRID
+}
+
+class Storage {
+         type : StorageType
+}
+Component <|-- Storage
+
+enum StorageType {
+FILE_SYSTEM
+SQL_DATABASE
+KEY_VALUE_DB
+GRAPH_DB
+}
+
+' Specialized storage
+class VectorDB {
+}
+Storage <|-- VectorDB
+
+class State {
+         value : EString
+         createdAt : EDate
+}
+Component <|-- State
+
+class Task {
+         description : EString
+         status : TaskStatus
+         priority : EInt
+}
+Component <|-- Task
+
+enum TaskStatus {
+PENDING
+RUNNING
+COMPLETED
+FAILED
+}
+
+class Hook {
+         trigger : EString
+         event : EString
+}
+Component <|-- Hook
+
+class RetrievalStrategy {
+         name : EString
+}
+Component <|-- RetrievalStrategy
+
+class RAG {
+}
+RetrievalStrategy <|-- RAG
+
+class Workflow {
+         name : EString
+         status : WorkflowStatus
+}
+Component <|-- Workflow
+
+enum WorkflowStatus {
+CREATED
+RUNNING
+PAUSED
+COMPLETED
+}
+
+class Goal {
+         objective : EString
+         priority : EInt
+}
+Component <|-- Goal
+
+class PromptTemplate {
+         template : EString
+         type : TemplateType
+}
+Component <|-- PromptTemplate
+
+enum TemplateType {
+USER_DEFINED
+SYSTEM_DEFINED
+}
+
+class Requirement {
+         condition : EString
+}
+Component <|-- Requirement
+
+class Server {
+         endpoint : EString
+         port : EInt
+}
+Component <|-- Server
+
+class File {
+         path : EString
+         format : EString
+         size : EInt
+}
+Component <|-- File
+
+class Interpreter {
+         sandboxed : EBoolean
+}
+Component <|-- Interpreter
+
+class Runtime {
+         environment : EString
+}
+Component <|-- Runtime
+
+class SupervisorAgent {
+         coordinationStrategy : EString
+}
+Component <|-- SupervisorAgent
+
+class Embedding {
+         dimensions : EInt
+         format : EString
+}
+Component <|-- Embedding
+
+class Team {
+         coordinationStrategy : EString
+}
+Component <|-- Team
+
+class Planning {
+         planType : EString
+}
+Component <|-- Planning
+
+class Plugin {
+         functions : EString
+}
+Component <|-- Plugin
+
+class FineTuning {
+         dataset : EString
+         method : EString
+}
+Component <|-- FineTuning
+
+class RunContext {
+         dependencies : EString
+}
+Component <|-- RunContext
+
+class Function {
+         description : EString
+}
+Component <|-- Function
+
+class SemanticDescription {
+         input : EString
+         output : EString
+}
+Component <|-- SemanticDescription
+
+class TaskAutomation {
+         approvalRequired : EBoolean
+}
+Component <|-- TaskAutomation
+
+class Service {
+         capability : EString
+}
+Component <|-- Service
+
+class ChatCompletion {
+         model : EString
+}
+Component <|-- ChatCompletion
+
+class ModelContextProtocol {
+         interfaceType : EString
+}
+Component <|-- ModelContextProtocol
+
+class AgentOS {
+         deploymentType : EString
+}
+Component <|-- AgentOS
+
+class SafetyEngine {
+         riskLevel : EString
+}
+Component <|-- SafetyEngine
+
+class MCP {
+         pipeline : EString
+}
+Component <|-- MCP
+
+class GraphExecution {
+         graphType : EString
+}
+Component <|-- GraphExecution
+
+class AgentRunContext {
+         executionMode : EString
+}
+Component <|-- AgentRunContext
+
+class Trigger {
+         eventSource : EString
+}
+Component <|-- Trigger
+
+class HumanInLoopWorkflow {
+         approvalStep : EString
+}
+Component <|-- HumanInLoopWorkflow
+
+class DeepAgent {
+         contextSize : EInt
+}
+Component <|-- DeepAgent
+
+class AgentHarness {
+         executionFramework : EString
+}
+Component <|-- AgentHarness
+
+class LangGraphRuntime {
+         executionMode : EString
+}
+Component <|-- LangGraphRuntime
+
+class DeepAgentsSDK {
+         version : EString
+}
+Component <|-- DeepAgentsSDK
+
+class DeepAgentsCLI {
+         environment : EString
+}
+Component <|-- DeepAgentsCLI
+
+class PlanningAndTaskDecomposition {
+         decompositionMethod : EString
+}
+Component <|-- PlanningAndTaskDecomposition
+
+class ContextManagement {
+         storageType : EString
+}
+Component <|-- ContextManagement
+
+class FileSystemTools {
+         toolType : EString
+}
+Component <|-- FileSystemTools
+
+class PluggableFilesystemBackends {
+         backendType : EString
+}
+Component <|-- PluggableFilesystemBackends
+
+class SubagentSpawning {
+         isolationLevel : EString
+}
+Component <|-- SubagentSpawning
+
+class LongTermMemory {
+         persistenceType : EString
+}
+Component <|-- LongTermMemory
+
+class MemoryStore {
+         storageType : EString
+}
+Component <|-- MemoryStore
+
+class LangGraph {
+         workflowType : EString
+}
+Component <|-- LangGraph
+
+class LangSmith {
+         monitoringLevel : EString
+}
+Component <|-- LangSmith
+
+class CodeAgent {
+         codeType : EString
+}
+Component <|-- CodeAgent
+
+class ToolCallingAgent {
+         callingMethod : EString
+}
+Component <|-- ToolCallingAgent
+
+' Construction relationships
+Agent "tools 0..*" --> Tool
+Agent "memory 0..1" --> Memory
+Agent "models 0..*" --> Model
+Agent "knowledge 0..1" --> Knowledge
+Agent "reasoning 0..1" --> Reasoning
+Agent "storage 0..1" --> Storage
+Agent "goal 0..1" --> Goal
+Agent "state 0..1" --> State
+Agent "workflow 0..1" --> Workflow
+Agent "interpreter 0..1" --> Interpreter
+Agent "requirements 0..*" --> Requirement
+Agent "supervisor 0..1" --> SupervisorAgent
+
+Tool "tasks 0..*" --> Task
+Tool "hooks 0..*" --> Hook
+
+Memory "storage 0..1" --> Storage
+Memory "contexts 0..*" *-- Context
+
+Model "reasoning 0..1" --> Reasoning
+
+Knowledge "retrievalStrategy 0..1" --> RetrievalStrategy
+Knowledge "storage 0..1" --> Storage
+Knowledge "memory 0..1" --> Memory
+
+Storage "states 0..*" --> State
+Storage "data 0..*" --> File
+
+RAG "vectorDB 0..1" --> VectorDB
+
+Workflow "steps 0..*" --> Task
+
+Goal "definedBy 0..1" --> User
+
+Requirement "tools 0..*" --> Tool
+
+Server "exposedAgents 0..*" --> Agent
+
+Interpreter "runtime 0..1" --> Runtime
+
+SupervisorAgent "team 0..1" --> Team
+
+Embedding "storage 0..1" --> Storage
+
+Team "sharedMemory 0..1" --> Memory
+Team "sharedStorage 0..1" --> Storage
+Team "sharedKnowledge 0..1" --> Knowledge
+Team "members 0..*" --> Agent
+
+Planning "workflow 0..1" --> Workflow
+
+Plugin "functions 0..*" --> Function
+
+FineTuning "model 0..1" --> Model
+
+RunContext "dependencies 0..*" --> Component
+
+SemanticDescription "function 0..1" --> Function
+
+TaskAutomation "task 0..1" --> Task
+
+Service "model 0..1" --> Model
+
+ChatCompletion "model 0..1" --> Model
+
+ModelContextProtocol "model 0..1" --> Model
+
+AgentOS "agents 0..*" --> Agent
+
+SafetyEngine "agent 0..1" --> Agent
+
+MCP "model 0..1" --> Model
+
+GraphExecution "workflow 0..1" --> Workflow
+
+AgentRunContext "execution 0..1" --> Workflow
+
+Trigger "workflow 0..1" --> Workflow
+
+HumanInLoopWorkflow "workflow 0..1" --> Workflow
+
+DeepAgent "memory 0..1" --> Memory
+DeepAgent "contextManagement 0..1" --> ContextManagement
+DeepAgent "fileSystemTools 0..1" --> FileSystemTools
+DeepAgent "pluggableBackends 0..1" --> PluggableFilesystemBackends
+DeepAgent "subagentSpawning 0..1" --> SubagentSpawning
+DeepAgent "longTermMemory 0..1" --> LongTermMemory
+
+AgentHarness "agent 0..1" --> Agent
+
+LangGraphRuntime "workflow 0..1" --> Workflow
+
+DeepAgentsSDK "deepAgent 0..1" --> DeepAgent
+
+DeepAgentsCLI "deepAgent 0..1" --> DeepAgent
+
+PlanningAndTaskDecomposition "workflow 0..1" --> Workflow
+
+ContextManagement "memory 0..1" --> Memory
+
+FileSystemTools "file 0..1" --> File
+
+PluggableFilesystemBackends "storage 0..1" --> Storage
+
+SubagentSpawning "subagent 0..1" --> Agent
+
+LongTermMemory "memoryStore 0..1" --> MemoryStore
+
+MemoryStore "memory 0..1" --> Memory
+
+LangGraph "workflow 0..1" --> Workflow
+
+LangSmith "workflow 0..1" --> Workflow
+
+CodeAgent "code 0..1" --> Function
+
+ToolCallingAgent "tool 0..1" --> Tool
+}
+
+package communication {
+class Prompt {
+         content : EString
+         type : PromptType
+}
+
+enum PromptType {
+SYSTEM
+USER
+ASSISTANT
+}
+
+class Team {
+}
+
+class User {
+         identifier : EString
+         name : EString
+}
+
+class Session {
+         id : EString
+         startTime : EDate
+}
+
+class Environment {
+         name : EString
+         type : EString
+}
+
+class InputSchema {
+         definition : EString
+         type : SchemaType
+}
+
+class OutputSchema {
+         definition : EString
+         type : SchemaType
+}
+
+enum SchemaType {
+JSON_SCHEMA
+XML_SCHEMA
+}
+
+class DirectLLMCall {
+}
+
+class Instruction {
+         content : EString
+}
+
+class HumanInteraction {
+         isBlocking : EBoolean
+}
+
+class Context {
+         content : EString
+}
+
+class AgentCommunicationProtocol {
+         protocolType : EString
+}
+Component <|-- AgentCommunicationProtocol
+
+class Kernel {
+         coordinationType : EString
+}
+Component <|-- Kernel
+
+class LiteLLMModel {
+         modelType : EString
+}
+Component <|-- LiteLLMModel
+
+class InferenceClientModel {
+         clientType : EString
+}
+Component <|-- InferenceClientModel
+
+' Communication relationships
+Prompt "inputSchema 0..1" --> InputSchema
+Prompt "outputSchema 0..1" --> OutputSchema
+Prompt "template 0..1" --> PromptTemplate
+Prompt "contexts 0..*" --> Context
+Prompt "user 0..1" --> User
+
+Team "sharedMemory 0..1" --> Memory
+Team "sharedStorage 0..1" --> Storage
+Team "sharedKnowledge 0..1" --> Knowledge
+Team "members 0..*" --> Agent
+
+Environment "data 0..*" --> File
+
+User "sessions 0..*" --> Session
+
+Session "user 0..1" --> User
+Session "agent 0..1" --> Agent
+
+DirectLLMCall "model 0..1" --> Model
+DirectLLMCall "prompt 0..1" --> Prompt
+
+Instruction "requirements 0..*" --> Requirement
+
+HumanInteraction "responsibleActor 0..1" --> User
+
+AgentCommunicationProtocol "agent 0..*" --> Agent
+
+Kernel "agents 0..*" --> Agent
+
+LiteLLMModel "model 0..1" --> Model
+
+InferenceClientModel "model 0..1" --> Model
+}
+}
+@enduml
